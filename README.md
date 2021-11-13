@@ -19,12 +19,20 @@
 
 <h3 align="left">How to use it :</h3>
 
-- <h4 align="left">Open list.txt : You can see a list like this : "folder -> fileToRun"</h4>
-![image](https://user-images.githubusercontent.com/55751991/140625477-b5835d64-3217-40ea-a48c-76a50fcdb9ac.png)
-- <h4 align="left">For example if you want to run shootme go to Mini-Interfaces/shootme, open a terminal and enter the following command :
+- <h4 align="left">You need 2 terminals : the server and the client</h4>
+- <h4 align="left">Run the server of the protocol you want (here TCP) with a non-used port (here : 8888) with the command :</h4>
 ```java
-java CliquePanel
+java TCPServer 8888
 ```
+- <h4 align="left">For the client use the port indicated before and the ip address of the server (here it's on the same machine) :</h4>
+```java
+java TCPClient localhost 8888
+```
+- <h4 align="left">For UDP it's the same thing for the server but you can only send one message, so you need to specify the message at the client :</h4>
+```java
+java UDPClient localhost 8888 message
+```
+- <h4 align="left">HTTPServer will start a server at the specified port but you can't send it anything right now</h4>
 
 <hr>
 
